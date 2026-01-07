@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微熱邱林 | 精緻西式甜點</title>
+    <link rel="stylesheet" href="cookies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/cupcake.png">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../../index.html" class="logo-link" title="回到首頁">
+                        <h1 class="site-name" style="white-space: nowrap;">微熱邱林</h1>
+                        <p class="site-subtitle">Sweet Dessert</p>
+                    </a>
+                </div>
+                
+                <button class="hamburger" id="hamburger" type="button">
+                    <span></span><span></span><span></span>
+                </button>
+                
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <!-- 關於我們 -->
+                        <li class="nav-item">
+                            <a class="nav-link" style="white-space: nowrap;">關於我們 <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu" style="min-width: max-content;">
+                                <a href="../about/about.html">品牌故事</a>
+                                <a href="../about me/me.html">我們的堅持</a>
+                                <a href="../member/member.html">團隊介紹</a>
+                            </div>
+                        </li>
+
+                        <!-- 商品介紹 -->
+                        <li class="nav-item">
+                          <a class="nav-link">商品介紹 <i class="fas fa-chevron-down"></i></a>
+                          <div class="dropdown-menu wide-dropdown">
+                              <div class="dropdown-column">
+                                  <a href="../ranking/rank.html">熱銷排行</a>
+                                  <a href="../overview/overview.html">商品總覽</a>
+                                  <div class="nested-dropdown">
+                                      <a class="has-submenu">個別專區 <i class="fas fa-chevron-right"></i></a>
+                                      <div class="nested-menu">
+                                          <a href="../pie/pie.html">法式塔派</a>
+                                          <a href="../dessert/dessert.html">西式常溫甜點</a>
+                                          <a href="cookies.html">手工餅乾</a>
+                                          <a href="../bread/bread.html">歐式麵包</a>
+                                          <a href="../cake/cake.html">蛋糕專區</a>
+                                          <a href="../puffs/puffs.html">泡芙專區</a>
+                                      </div>
+                                  </div>  
+                              </div>
+                          </div>
+                      </li>
+
+                        <!-- 門市資訊 -->
+                        <li class="nav-item">
+                            <a href="../shop/shop.html" class="nav-link">門市資訊</a>
+                        </li>
+                        
+                        <!-- 近期活動 -->
+                        <li class="nav-item">
+                            <a class="nav-link">近期活動 <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                              <a href="../Newproduct/Newproduct.html">最新上市</a>
+                              <a href="../activity/activity.html">優惠活動</a>
+                            </div>
+                        </li>
+                        
+                        <!-- 包裹進度 -->
+                        <li class="nav-item">
+                            <a class="nav-link">包裹進度 <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                              <a href="../order/order.html">查詢訂單</a>
+                              <a href="../order/order.html">追蹤物流狀態</a>
+                            </div>
+                        </li>
+                        
+                        <!-- 會員中心 -->
+                        <li class="nav-item">
+                            <a class="nav-link">會員中心 <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                              <a href="../safe/safe.html">賬戶與安全管理</a>
+                              <a href="../record/record.html">近期登入紀錄</a>
+                            </div>
+                        </li>
+                        
+                        <!-- 聯絡我們 -->
+                        <li class="nav-item">
+                            <a class="nav-link">聯絡我們 <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="../online/online.html">線上客服</a>
+                                <a href="../use/connect/connect.html">客服信箱</a>
+                                <a href="../use/connect/connect.html">客服專線</a>
+                                <a href="../QA/qa.html">常見問題</a>
+                                <a href="../use/use.html">使用指南</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-right">
+                    <div class="icon-section">
+                        <button class="icon-btn" id="chatBtn" title="訊息聊聊" type="button"><i class="fas fa-comment-dots"></i></button>
+                        <button class="icon-btn" id="trackBtn" title="追蹤商品" type="button"><i class="fas fa-heart"></i><span class="icon-badge">5</span></button>
+                        <button class="icon-btn" id="cartBtn" title="購物車" type="button"><i class="fas fa-shopping-cart"></i><span class="cart-count">3</span></button>
+                        <button class="icon-btn" id="profileBtn" title="會員頭貼" type="button"><i class="fas fa-user-circle"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <!-- 餅乾專區 (Card 排版) -->
+  <section class="cookie-section" id="cookies">
+    <div class="container">
+  
+      <!-- 區塊標題 -->
+      <div class="cookie-header">
+        <span class="label">Cookies Collection</span>
+        <h2 class="cookie-title">餅乾</h2>
+        <p class="cookie-intro">
+          看似簡單，卻最考驗細節的甜點。<br>
+          我們從配方比例、烘焙時間到口感層次，一一調整，只為做出耐吃、不膩口的餅乾。<br><br>
+          不靠過量糖份堆疊風味，讓每一口都回歸食材本身的香氣與溫度。
+        </p>
+      </div>
+  
+      <!-- Card Grid -->
+      <div class="cookie-grid">
+  
+        <!-- 巧克力豆餅乾 -->
+        <article class="cookie-card fade-in">
+          <div class="cookie-card-img">
+            <img src="../../assets/images/cookies/IMG_8719.jpg" alt="巧克力豆餅乾">
+            <span class="cookie-badge">經典</span>
+          </div>
+          <div class="cookie-card-body">
+            <div class="cookie-card-top">
+              <h3 class="cookie-name">巧克力豆餅乾</h3>
+              <span class="cookie-price">NT$ 50</span>
+            </div>
+            <p class="cookie-desc">
+              香濃巧克力豆均勻分佈於餅體之中，外層微酥、內部柔軟；甜度適中，是最不容易吃膩的口味。
+            </p>
+            <!-- 星等評分 -->
+            <div class="rating-section">
+              <div class="rating-summary">
+                <div class="rating-stars">
+                  <!-- 星星由JS動態生成 -->
+                </div>
+                <span class="rating-score">0.0</span>
+                <span class="review-count">(0則評論)</span>
+              </div>
+              
+              <!-- 顯示最新評論 -->
+              <div class="reviews-preview">
+                <!-- 評論會由JS動態生成 -->
+              </div>
+              
+              <!-- 按鈕容器 - 兩個按鈕並排 -->
+              <div class="rating-buttons">
+                <!-- 我要評分按鈕 -->
+                <button class="rate-product-btn">
+                  <i class="fas fa-pen"></i> 我要評分
+                </button>
+                
+                <!-- 查看全部評論按鈕 -->
+                <button class="view-all-reviews-btn">
+                  <i class="fas fa-comment-dots"></i> 查看評論
+                </button>
+              </div>
+            </div>
+            <div class="cookie-tags">
+              <span class="cookie-tag">巧克力</span>
+              <span class="cookie-tag">外酥內軟</span>
+              <span class="cookie-tag">經典款</span>
+            </div>
+            <div class="cookies-actions">
+              <button class="btn-follow" type="button">
+                <i class="fas fa-heart"></i> 追蹤
+              </button>
+              <button class="btn-cart" type="button">
+                <i class="fas fa-shopping-cart"></i> 加入購物車
+              </button>
+            </div>
+          </div>
+        </article>
+  
+        <!-- 曲奇餅乾 -->
+        <article class="cookie-card fade-in">
+          <div class="cookie-card-img">
+            <img src="../../assets/images/cookies/IMG_8720.jpg" alt="曲奇餅乾">
+            <span class="cookie-badge badge-soft">人氣</span>
+          </div>
+          <div class="cookie-card-body">
+            <div class="cookie-card-top">
+              <h3 class="cookie-name">曲奇餅乾</h3>
+              <span class="cookie-price">NT$ 20</span>
+            </div>
+            <p class="cookie-desc">
+              奶油香氣溫潤細緻，入口即化。配方純粹、不多餘甜味，是日常最剛好的小點心。
+            </p>
+            <!-- 星等評分區 -->
+            <div class="rating-section">
+              <div class="rating-summary">
+                <div class="rating-stars">
+                  <!-- 星星由JS動態生成 -->
+                </div>
+                <span class="rating-score">0.0</span>
+                <span class="review-count">(0則評論)</span>
+              </div>
+              
+              <!-- 顯示最新評論 -->
+              <div class="reviews-preview">
+                <!-- 評論會由JS動態生成 -->
+              </div>
+              
+              <!-- 按鈕容器 - 兩個按鈕並排 -->
+              <div class="rating-buttons">
+                <!-- 我要評分按鈕 -->
+                <button class="rate-product-btn">
+                  <i class="fas fa-pen"></i> 我要評分
+                </button>
+                
+                <!-- 查看全部評論按鈕 -->
+                <button class="view-all-reviews-btn">
+                  <i class="fas fa-comment-dots"></i> 查看評論
+                </button>
+              </div>
+            </div>
+            <div class="cookie-tags">
+              <span class="cookie-tag">奶油</span>
+              <span class="cookie-tag">入口即化</span>
+              <span class="cookie-tag">日常款</span>
+            </div>
+            <div class="cookies-actions">
+              <button class="btn-follow" type="button">
+                <i class="fas fa-heart"></i> 追蹤
+              </button>
+              <button class="btn-cart" type="button">
+                <i class="fas fa-shopping-cart"></i> 加入購物車
+              </button>
+            </div>
+          </div>
+        </article>
+  
+        <!-- 燕麥餅乾 -->
+        <article class="cookie-card fade-in">
+          <div class="cookie-card-img">
+            <img src="../../assets/images/cookies/IMG_8721.jpg" alt="燕麥餅乾">
+          </div>
+          <div class="cookie-card-body">
+            <div class="cookie-card-top">
+              <h3 class="cookie-name">燕麥餅乾</h3>
+              <span class="cookie-price">NT$ 50</span>
+            </div>
+            <p class="cookie-desc">
+              燕麥顆粒帶來自然咀嚼感，口感紮實卻不乾硬；清爽不膩，是低負擔甜點的安心選擇。
+            </p>
+            <!-- 星等評分區 -->
+            <div class="rating-section">
+              <div class="rating-summary">
+                <div class="rating-stars">
+                  <!-- 星星由JS動態生成 -->
+                </div>
+                <span class="rating-score">0.0</span>
+                <span class="review-count">(0則評論)</span>
+              </div>
+              
+              <!-- 顯示最新評論 -->
+              <div class="reviews-preview">
+                <!-- 評論會由JS動態生成 -->
+              </div>
+              
+              <!-- 按鈕容器 - 兩個按鈕並排 -->
+              <div class="rating-buttons">
+                <!-- 我要評分按鈕 -->
+                <button class="rate-product-btn">
+                  <i class="fas fa-pen"></i> 我要評分
+                </button>
+                
+                <!-- 查看全部評論按鈕 -->
+                <button class="view-all-reviews-btn">
+                  <i class="fas fa-comment-dots"></i> 查看評論
+                </button>
+              </div>
+            </div>
+            <div class="cookie-tags">
+              <span class="cookie-tag">燕麥</span>
+              <span class="cookie-tag">低負擔</span>
+              <span class="cookie-tag">紮實</span>
+            </div>
+            <div class="cookies-actions">
+              <button class="btn-follow" type="button">
+                <i class="fas fa-heart"></i> 追蹤
+              </button>
+              <button class="btn-cart" type="button">
+                <i class="fas fa-shopping-cart"></i> 加入購物車
+              </button>
+            </div>
+          </div>
+        </article>
+  
+        <!-- 美式軟餅乾 -->
+        <article class="cookie-card fade-in">
+          <div class="cookie-card-img">
+            <img src="../../assets/images/cookies/IMG_8722.jpg" alt="美式軟餅乾">
+            <span class="cookie-badge">熱銷</span>
+          </div>
+          <div class="cookie-card-body">
+            <div class="cookie-card-top">
+              <h3 class="cookie-name">美式軟餅乾</h3>
+              <span class="cookie-price">NT$ 60</span>
+            </div>
+            <p class="cookie-desc">
+              外層微酥、內裡柔軟濕潤，口感厚實卻不甜膩；每一口都能感受到剛出爐的溫暖幸福感。
+            </p>
+            <!-- 星等評分區 -->
+            <div class="rating-section">
+              <div class="rating-summary">
+                <div class="rating-stars">
+                  <!-- 星星由JS動態生成 -->
+                </div>
+                <span class="rating-score">0.0</span>
+                <span class="review-count">(0則評論)</span>
+              </div>
+              
+              <!-- 顯示最新評論 -->
+              <div class="reviews-preview">
+                <!-- 評論會由JS動態生成 -->
+              </div>
+              
+              <!-- 按鈕容器 - 兩個按鈕並排 -->
+              <div class="rating-buttons">
+                <!-- 我要評分按鈕 -->
+                <button class="rate-product-btn">
+                  <i class="fas fa-pen"></i> 我要評分
+                </button>
+                
+                <!-- 查看全部評論按鈕 -->
+                <button class="view-all-reviews-btn">
+                  <i class="fas fa-comment-dots"></i> 查看評論
+                </button>
+              </div>
+            </div>
+            <div class="cookie-tags">
+              <span class="cookie-tag">美式</span>
+              <span class="cookie-tag">濕潤</span>
+              <span class="cookie-tag">厚實</span>
+            </div>
+            <div class="cookies-actions">
+              <button class="btn-follow" type="button">
+                <i class="fas fa-heart"></i> 追蹤
+              </button>
+              <button class="btn-cart" type="button">
+                <i class="fas fa-shopping-cart"></i> 加入購物車
+              </button>
+            </div>
+          </div>
+        </article>
+  
+      </div>
+    </div>
+  </section>
+  
+    <!-- 評論模態框 -->
+    <div class="modal" id="reviewsModal">
+      <div class="modal-content large-modal">
+          <span class="close-modal" onclick="closeReviewsModal()">&times;</span>
+          <h2 class="modal-title" id="reviewsModalTitle">商品評論</h2>
+          
+          <div class="reviews-container">
+              <div class="reviews-header">
+                  <div class="product-rating-overview">
+                      <div class="overall-rating">
+                          <span class="rating-number" id="overallRating">0.0</span>
+                          <div class="rating-stars-large">
+                              <!-- 星星會由JS動態生成 -->
+                          </div>
+                          <span class="total-reviews" id="totalReviews">0則評論</span>
+                      </div>
+                      
+                      <div class="rating-distribution">
+                          <!-- 評分分佈會由JS動態生成 -->
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="reviews-list" id="reviewsList">
+                  <!-- 評論列表會由JS動態生成 -->
+              </div>
+              
+              <button class="load-more-reviews" style="display: none;">
+                  <i class="fas fa-sync-alt"></i> 載入更多評論
+              </button>
+          </div>
+      </div>
+    </div>
+  
+    <!-- 評分模態框 -->
+    <div class="modal" id="ratingModal">
+      <div class="modal-content">
+          <span class="close-modal" onclick="closeRatingModal()">&times;</span>
+          <h2 class="modal-title" id="ratingModalTitle">為商品評分</h2>
+          
+          <div class="rating-form">
+              <div class="star-rating-input">
+                  <span class="rating-label">評分：</span>
+                  <div class="stars-selector">
+                      <i class="far fa-star" data-value="1"></i>
+                      <i class="far fa-star" data-value="2"></i>
+                      <i class="far fa-star" data-value="3"></i>
+                      <i class="far fa-star" data-value="4"></i>
+                      <i class="far fa-star" data-value="5"></i>
+                  </div>
+                  <span class="rating-value-text">請選擇星等</span>
+              </div>
+              
+              <div class="form-group">
+                  <label for="reviewTitle">評論標題 (選填)</label>
+                  <input type="text" id="reviewTitle" placeholder="例：非常美味的泡芙！">
+              </div>
+              
+              <div class="form-group">
+                  <label for="reviewContent">評論內容</label>
+                  <textarea id="reviewContent" rows="5" placeholder="請分享您的真實體驗..."></textarea>
+              </div>
+              
+              <div class="form-group">
+                  <label for="reviewerName">顯示名稱</label>
+                  <input type="text" id="reviewerName" placeholder="將顯示在您的評論旁">
+              </div>
+              
+              <div class="form-actions">
+                  <button class="submit-rating-btn" onclick="submitRating()">
+                      <i class="fas fa-paper-plane"></i> 提交評論
+                  </button>
+                  <button class="cancel-rating-btn" onclick="closeRatingModal()">
+                      <i class="fas fa-times"></i> 取消
+                  </button>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+      <!-- 底部 -->
+      <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>微熱邱林</h2>
+                    <p>精緻西式甜點專家</p>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 微熱邱林. 版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- 登入/註冊模態框 -->
+        <div class="modal" id="authModal">
+          <div class="modal-content">
+              <span class="close-modal">&times;</span>
+              <div class="modal-tabs">
+                  <button class="tab-btn active" data-tab="login" type="button">登入</button>
+                  <button class="tab-btn" data-tab="register" type="button">註冊</button>
+              </div>
+              <div class="tab-content active" id="loginTab">
+                  <h3>會員登入</h3>
+                  <form id="loginForm">
+                      <div class="form-group">
+                          <label for="loginEmail">電子郵件</label>
+                          <input type="email" id="loginEmail" placeholder="請輸入您的電子郵件" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="loginPassword">密碼</label>
+                          <input type="password" id="loginPassword" placeholder="請輸入您的密碼" required>
+                      </div>
+                      <button type="submit" class="submit-btn">登入</button>
+                  </form>
+              </div>
+              <div class="tab-content" id="registerTab">
+                  <h3>會員註冊</h3>
+                  <form id="registerForm">
+                      <div class="form-group">
+                          <label for="registerName">姓名</label>
+                          <input type="text" id="registerName" placeholder="請輸入您的姓名" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="registerEmail">電子郵件</label>
+                          <input type="email" id="registerEmail" placeholder="請輸入您的電子郵件" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="registerPassword">密碼</label>
+                          <input type="password" id="registerPassword" placeholder="請設定密碼 (至少6位)" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="confirmPassword">確認密碼</label>
+                          <input type="password" id="confirmPassword" placeholder="請再次輸入密碼" required>
+                      </div>
+                      <button type="submit" class="submit-btn">註冊</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  
+      <!-- 右下角對話按鈕 -->
+      <div class="chat-trigger" id="chatTrigger">
+          <i class="fas fa-comment-dots"></i>
+      </div>
+  
+      <!-- 聊天視窗 -->
+      <div class="chat-window" id="chatWindow">
+          <header class="chat-header">
+              <div class="chat-header-info">
+                  <i class="fas fa-robot"></i>
+                  <div>
+                      <h3>微熱邱林智能助手</h3>
+                      <span class="status online">線上</span>
+                  </div>
+              </div>
+              <button class="close-chat" id="closeChat">
+                  <i class="fas fa-times"></i>
+              </button>
+          </header>
+          
+          <div class="chat-body" id="chatBody">
+              <div class="msg sys">
+                  <div class="msg-content">
+                      您好！我是微熱邱林智能助手，請問有什麼可以幫您的嗎？
+                  </div>
+                  <div class="msg-time">現在</div>
+              </div>
+          </div>
+          
+          <div class="chat-footer">
+              <div class="quick-btns">
+                  <button onclick="quickReply('運送問題')">運送問題</button>
+                  <button onclick="quickReply('商品諮詢')">商品諮詢</button>
+                  <button onclick="quickReply('訂單查詢')">訂單查詢</button>
+                  <button onclick="quickReply('轉接人工')">轉接人工</button>
+              </div>
+              <div class="chat-input-area">
+                  <input type="text" id="chatInput" placeholder="輸入您的問題..." maxlength="200">
+                  <button class="send-btn" onclick="sendMessage()">
+                      <i class="fas fa-paper-plane"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  
+      <!-- 購物車側邊欄 -->
+      <aside class="cart-sidebar" id="cartSidebar">
+          <div class="cart-header">
+              <h3>購物車</h3>
+              <button class="close-cart" type="button">&times;</button>
+          </div>
+          <div class="cart-items">
+              <!-- 購物車項目將由JS動態生成 -->
+              <div class="cart-item">
+                  <div class="cart-item-img" style="background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80')"></div>
+                  <div class="cart-item-info">
+                      <div class="cart-item-controls">
+                          <button class="quantity-btn minus" type="button">-</button>
+                          <span class="quantity">1</span>
+                          <button class="quantity-btn plus" type="button">+</button>
+                          <button class="remove-item" type="button"><i class="fas fa-trash"></i></button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="cart-footer">
+              <div class="cart-total">
+                  <span>總計</span>
+                  <span class="total-price">NT$ 450</span>
+              </div>
+              <button class="checkout-btn" type="button">前往結帳</button>
+              <button class="continue-btn" type="button">繼續購物</button>
+          </div>
+      </aside>
+
+    <!-- 回到頂部按鈕 -->
+    <button class="back-to-top" id="backToTop" type="button">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+<script src="cookies.js"></script>
+</body>
+</html>
+  
